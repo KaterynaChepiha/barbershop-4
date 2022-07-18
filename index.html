@@ -161,35 +161,33 @@
 
       <!-- Section Benefits -->
       <section class="benefits section">
-        <div class="container">
-          <ul class="list">
-            <li>
-              <p class="benefits-number">600</p>
-              <sup class="benefits-plus">&#43;</sup>
+        <div class="container benefits-container">
+          <ul class="list benefits-list">
+            <li class="benefits-list-item">
+              <p class="benefits-number">600<sup class="benefits-plus">&#43;</sup></p>
               <p class="benefits-text">Довольных клиентов в день</p>
             </li>
-            <li>
-              <p class="benefits-number">50</p>
-              <sup class="benefits-plus">&#43;</sup>
+            <li class="benefits-list-item benefits-item-50">
+              <p class="benefits-number">50<sup class="benefits-plus">&#43;</sup></p>
               <p class="benefits-text">Наград за отличный сервис</p>
             </li>
-            <li>
-              <p class="benefits-number">20</p>
-              <sup class="benefits-plus">&#43;</sup>
+            <li class="benefits-list-item">
+              <p class="benefits-number">20<sup class="benefits-plus">&#43;</sup></p>
               <p class="benefits-text">Лучших мастеров Киева</p>
             </li>
-            <li>
-              <p class="benefits-number">100</p>
-              <sup class="benefits-plus">&#43;</sup>
+            <li class="benefits-list-item benefits-item-100">
+              <p class="benefits-number">100<sup class="benefits-plus">&#43;</sup></p>
               <p class="benefits-text">Подарков постоянным клиентам</p>
             </li>
           </ul>
-          <p class="benefits-paragraph">старая традиционная школа</p>
-          <h2 class="benefits-title">Почему приходят именно к нам?</h2>
-          <p class="benefits-item">
-            О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
-            прочитать.
-          </p>
+          <div class="benefits-descr">
+            <p class="benefits-paragraph">старая традиционная школа</p>
+            <h2 class="benefits-title">Почему приходят именно к нам?</h2>
+            <p class="benefits-item">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
+              прочитать.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -469,13 +467,22 @@
 
       <!-- Section Contacts -->
       <section class="contacts section">
-        <div class="container">
-          <div>
+        <div class="container contacts-container">
+          <div class="contacts-left-side">
             <h2 class="contacts-title online">Онлайн-запись</h2>
-            <form action=""></form>
-            <button class="button" type="button" data-modal-open>отправить</button>
+            <form class="form" name="register-form" autocomplete="on">
+              <label for="user-name">Имя*</label>
+              <input type="text" id="user-name" />
+              <label for="user-phone">Телефон*</label>
+              <input type="tel" id="user-phone" />
+              <label for="user-messanger">сообщение</label>
+
+              <textarea name="messanger" id="user-messanger" cols="30" rows="5"></textarea>
+              <button class="button" type="submit">отправить</button>
+            </form>
           </div>
-          <div>
+
+          <div class="contacts-right-side">
             <h2 class="contacts-title">Контакты</h2>
             <address>
               <ul class="list contacts-list">
@@ -516,13 +523,13 @@
 
     <!-- Section footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
-        <ul class="list">
-          <li>
+        <ul class="list footer-list">
+          <li class="footer-instagram footer-list-item">
             <a class="link networks" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
           </li>
-          <li>
+          <li class="footer-youtube footer-list-item">
             <a class="link networks" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
           </li>
         </ul>
