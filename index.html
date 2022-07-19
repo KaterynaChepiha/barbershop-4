@@ -46,6 +46,41 @@
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
+
+          <form class="form" autocomplete="off">
+            <p class="form-text">Запись на стрижку</p>
+            <div class="form-field">
+              <label for="user-name">Имя</label>
+              <input class="input" type="text" id="user-name" name="user-name" />
+            </div>
+
+            <div class="form-field">
+              <label for="user-tel">Телефон</label>
+              <input class="input" type="tel" id="user-tel" name="user-tel" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-date" for="date">Дата и время записи</label>
+              <input
+                class="input date-input"
+                type="datetime-local"
+                id="date"
+                name="meeting-date"
+                min="2022-07-19T08:00"
+              />
+            </div>
+
+            <label for="comment">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
+            <button class="button button-submit btn-modal btn-online" type="submit">
+              Отправить
+            </button>
+          </form>
         </div>
       </div>
     </header>
@@ -471,14 +506,43 @@
           <div class="contacts-left-side">
             <h2 class="contacts-title online">Онлайн-запись</h2>
             <form class="form" name="register-form" autocomplete="on">
-              <label for="user-name">Имя*</label>
-              <input type="text" id="user-name" />
-              <label for="user-phone">Телефон*</label>
-              <input type="tel" id="user-phone" />
-              <label for="user-messanger">сообщение</label>
+              <div class="contact-form-wrapper">
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-field"
+                    type="text"
+                    name="user-name"
+                    required
+                    minlength="3"
+                    placeholder="Gabriel Fros"
+                  />
+                  <span class="contact-form-label">Имя*</span>
+                </label>
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-field phone"
+                    type="tel"
+                    name="user-phone"
+                    required
+                    minlength="10"
+                    placeholder="+380 (93) 60-55-478"
+                    id="user-phone"
+                  />
+                  <span class="contact-form-label">Телефон*</span>
+                </label>
+              </div>
 
-              <textarea name="messanger" id="user-messanger" cols="30" rows="5"></textarea>
-              <button class="button" type="submit">отправить</button>
+              <label class="user-messange contact-form-group">
+                <textarea
+                  class="contact-form-field textarea"
+                  name="messanger"
+                  cols="30"
+                  rows="5"
+                  placeholder="Напиши сообщение"
+                ></textarea>
+                <span class="user-comment">сообщение</span>
+              </label>
+              <button class="button btn-footer" type="submit">отправить</button>
             </form>
           </div>
 
@@ -536,5 +600,17 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js"
+      integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/input-mask.js"></script>
   </body>
 </html>
